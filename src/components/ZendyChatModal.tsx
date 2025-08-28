@@ -18,7 +18,7 @@ const ZendyChatModal = ({ isOpen, onClose }: ZendyChatModalProps) => {
       />
       
       {/* Modal */}
-      <div className="relative w-full max-w-md h-[600px] bg-white rounded-2xl shadow-zendy-large overflow-hidden animate-slide-up">
+      <div className="relative w-full max-w-md h-[600px] bg-white rounded-2xl shadow-zendy-large overflow-hidden animate-slide-up flex flex-col">
         {/* Header - WhatsApp style */}
         <div className="flex items-center justify-between p-4 bg-zendy-primary text-white">
           <div className="flex items-center gap-3">
@@ -39,14 +39,14 @@ const ZendyChatModal = ({ isOpen, onClose }: ZendyChatModalProps) => {
         </div>
         
         {/* Iframe Content */}
-        <div className="h-full pb-16">
+        <div className="flex-1 overflow-hidden">
           <iframe
             src="https://dash.superagentes.ai/agents/cmehf9no0001yjp92d23bze25/iframe"
             width="100%"
             height="100%"
             frameBorder="0"
             allow="clipboard-write"
-            className="border-0"
+            className="border-0 w-full h-full"
           />
         </div>
       </div>

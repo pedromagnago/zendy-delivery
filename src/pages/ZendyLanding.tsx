@@ -15,7 +15,7 @@ const ZendyLanding = () => {
     <>
       <main className="overflow-x-hidden">
         <HeroSection onOpenChat={openChat} />
-        <ProblemsSection />
+        <ProblemsSection onOpenChat={openChat} />
         <SolutionSection />
         <FinalCallToActionSection onOpenChat={openChat} />
       </main>

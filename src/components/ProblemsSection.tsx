@@ -1,6 +1,11 @@
 import stressedOwnerImage from "@/assets/stressed-restaurant-owner.jpg";
+import { Button } from "@/components/ui/button";
 
-const ProblemsSection = () => {
+interface ProblemsSectionProps {
+  onOpenChat: () => void;
+}
+
+const ProblemsSection = ({ onOpenChat }: ProblemsSectionProps) => {
   const problems = [
     {
       title: "Clientes que desistem",
@@ -34,7 +39,7 @@ const ProblemsSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-zendy-large">
               <img
                 src={stressedOwnerImage}
-                alt="Dono de restaurante stressado a gerir múltiplos pedidos"
+                alt="Dono de restaurante stressado a gerir múltiplos pedidos em telemóvel, tablet e papéis num ambiente caótico"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -57,6 +62,18 @@ const ProblemsSection = () => {
               </div>
             ))}
           </div>
+        </div>
+        
+        {/* Call to Action Button */}
+        <div className="mt-12 text-center animate-fade-in">
+          <Button 
+            variant="zendy" 
+            size="lg" 
+            onClick={onOpenChat}
+            className="text-lg px-8 py-4 h-auto"
+          >
+            💬 Falar com a Zendy
+          </Button>
         </div>
       </div>
     </section>
