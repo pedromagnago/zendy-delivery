@@ -18,6 +18,8 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        zendy: "gradient-primary text-white shadow-zendy hover:shadow-zendy-large hover:scale-105 transition-all duration-300",
+        zendyInverse: "bg-white text-zendy-primary border-2 border-white shadow-zendy hover:bg-white/90 hover:shadow-zendy-large hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
